@@ -30,6 +30,36 @@ If you have a MacOS then you are lucky 'cause you may use the out of the box `di
 
 Done, now you have a mounted image in your USB drive.
 
+#### On Linux:
+1. Insert the USB flash drive into the USB port.
+2. Find out the name of the USB drive using the lsblk tool:
+```sh
+lsblk
+```
+It will show the mounted disks, like:
+```
+sda      8:0    0 931.5G  0 disk 
+├─sda1   8:1    0   500M  0 part 
+├─sda2   8:2    0   128M  0 part [SWAP]
+sdx      8:16   1   7.3G  0 disk 
+├─sdx1   8:17   1   2.4M  0 part 
+└─sdx2   8:18   1   7.3G  0 part /media/rafael/NOVO VOLUME
+```
+In this example, the USB device is `/dev/sdx` but this may vary on your system. The best way to identify the name is by checking the size of the device.
+3. On most Linux distributions the USB flash drive will be automatically mounted when inserted. So unmount it:
+```
+sudo umount /dev/sdx1
+```
+4. The last step is to flash the Debian ISO image to the USB drive. Make sure you replace `/dev/sdx` with your drive and do not append the partition number.
+
+Also, replace `/path/to/debian-10.0.0-amd64-netinst.iso` with the path to the ISO file. If you downloaded the file using web browser then it should be stored in the Downloads folder located in your user account.
+
+```sh
+sudo dd bs=4M if=/path/to/debian-10.0.0-amd64-netinst.iso of=/dev/sdx status=progress oflag=sync
+```
+
+That's all! You have a bootable Debian 10 on your USB stick.
+
 
 ### Freeing space from your WinOS
 
