@@ -54,3 +54,13 @@ setxkbmap -model abnt2 -layout br
 ```
 
 We may want to add it to your /etc/.profile file to run everytime you start your OS.
+
+
+### Wireless Setup
+
+You must install the right network firmware [reference link](https://linuxdicasesuporte.blogspot.com/2016/06/instalar-driver-wireless-no-debian.html).
+
+You may install all of them:
+```sh
+sudo apt install firmware-ralink firmware-atheros firmware-realtek firmware-iwlwifi firmware-b43-installer firmware-b43legacy-installer atmel-firmware  firmware-brcm80211 firmware-ipw2x00 firmware-libertas libertas-firmware zd1211-firmware
+```
