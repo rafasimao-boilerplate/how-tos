@@ -2,6 +2,21 @@
 
 Now you might want to setup some common stuff into your new Debian Os, like Zsh, google chrome, keyboard settings, etc.
 
+### Setting up the apt/source.list
+Edit the /etc/apt/sources.list:
+```
+# See sources.list(5) for more information, especialy
+# Remember that you can only use http, ftp or file URIs
+# CDROMs are managed through the apt-cdrom tool.
+deb http://http.us.debian.org/debian stable main contrib non-free
+deb http://non-us.debian.org/debian-non-US stable/non-US main contrib non-free
+deb http://security.debian.org stable/updates main contrib non-free
+
+# Uncomment if you want the apt-get source function to work
+#deb-src http://http.us.debian.org/debian stable main contrib non-free
+#deb-src http://non-us.debian.org/debian-non-US stable/non-US main contrib non-free
+```
+
 ### Installing Zsh
 
 [Instalation link](https://github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH#zsh)
