@@ -64,3 +64,16 @@ You may install all of them:
 ```sh
 sudo apt install firmware-ralink firmware-atheros firmware-realtek firmware-iwlwifi firmware-b43-installer firmware-b43legacy-installer atmel-firmware  firmware-brcm80211 firmware-ipw2x00 firmware-libertas libertas-firmware zd1211-firmware
 ```
+
+### Problems Screen Sharing
+
+You may pass through some problems to share screen through hangouts and other screen sharing apps.
+
+To fix it just:
+```
+# go to your gnome config
+vim /etc/gdm/custom/conf
+
+# and uncomment the 4th line (WaylandEnable=false) and restart your system, it will fix your issue.
+# this is an error due to your gnome interface be using Wayland instead of Xorg
+``` 
