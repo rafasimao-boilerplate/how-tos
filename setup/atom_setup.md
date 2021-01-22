@@ -19,7 +19,7 @@ Recommend installing:
 - [Atom Updater Linux](https://atom.io/packages/atom-updater-linux)
 - [File-icons](https://atom.io/packages/file-icons)
 - [Dracula Theme](https://draculatheme.com/atom/)
-
+- [X Terminal](https://atom.io/packages/x-terminal)
 
 ### Shortcuts
 
